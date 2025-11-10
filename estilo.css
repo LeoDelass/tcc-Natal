@@ -1,0 +1,273 @@
+/* --------------------------------------------- */
+/* 🎨 VARIÁVEIS GLOBAIS                          */
+/* Facilita ajustes de cor, espaçamento e estilo */
+/* --------------------------------------------- */
+:root {
+    /* Cores principais */
+    --cor-principal: rgb(255, 0, 0);
+    --cor-principal-escura: rgb(225, 0, 0);
+    --cor-secundaria: rgb(67, 6, 6);
+    --cor-texto: rgb(0, 0, 0);
+    --cor-branca: rgb(255, 255, 255);
+
+    /* Sombreamento */
+    --sombra-card: 0 4px 10px var(--cor-principal);
+
+    /* Espaçamentos padrão */
+    --espacamento-pequeno: 8px;
+    --espacamento-medio: 20px;
+    --espacamento-grande: 40px;
+
+    /* Bordas */
+    --borda-arredondada: 6px;
+    --borda-card: 12px;
+
+    /* Fontes */
+    --fonte-principal: Arial, sans-serif;
+}
+
+/* --------------------------------------------- */
+/* 🔧 RESET GERAL                                */
+/* --------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------- */
+/* 🌐 ESTILO BASE DO SITE                        */
+/* --------------------------------------------- */
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    background-color: var(--cor-branca);
+}
+
+/* --------------------------------------------- */
+/* 🔺 CABEÇALHO                                  */
+/* --------------------------------------------- */
+.cabecalho {
+    background-color: var(--cor-principal-escura);
+    color: var(--cor-branca);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--espacamento-pequeno) var(--espacamento-medio);
+}
+
+/* Logo e menu à esquerda */
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-medio);
+}
+
+/* Tamanho da logo */
+.logo {
+    height: 50px;
+}
+
+/* --------------------------------------------- */
+/* 🧭 MENU DE NAVEGAÇÃO                          */
+/* --------------------------------------------- */
+.lista-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--espacamento-medio);
+}
+
+/* Cada item do menu */
+.lista-menu li {
+    position: relative;
+}
+
+/* Links principais */
+.lista-menu li a {
+    text-decoration: none;
+    color: var(--cor-branca);
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+    padding: var(--espacamento-pequeno) 12px;
+    transition: background 0.3s;
+}
+
+/* Efeito hover */
+.lista-menu li a:hover {
+    background-color: var(--cor-principal);
+    border-radius: 4px;
+}
+
+/* Submenu oculto */
+.lista-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: var(--cor-secundaria);
+    min-width: 180px;
+}
+
+/* Links do submenu */
+.lista-menu li ul li a {
+    padding: 10px 15px;
+    gap: var(--espacamento-pequeno);
+}
+
+/* Mostra submenu ao passar o mouse */
+.lista-menu li:hover ul {
+    display: block;
+}
+
+/* --------------------------------------------- */
+/* 📝 CONTEÚDO PRINCIPAL                         */
+/* --------------------------------------------- */
+.conteudo {
+    padding: var(--espacamento-grande);
+}
+
+/* --------------------------------------------- */
+/* 💬 SEÇÃO: INTRODUÇÃO                          */
+/* --------------------------------------------- */
+.introducao {
+    text-align: center;
+    margin-bottom: var(--espacamento-grande);
+}
+
+.introducao h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--cor-principal);
+}
+
+.introducao p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.introducao img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* --------------------------------------------- */
+/* 🌟 SEÇÃO: BENEFÍCIOS                         */
+/* --------------------------------------------- */
+.beneficios {
+    margin-bottom: var(--espacamento-grande);
+}
+
+.beneficios h2 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.beneficios i {
+    color: var(--cor-texto);
+    margin-right: 10px;
+}
+
+/* --------------------------------------------- */
+/* ⚙️ SEÇÃO: RECURSOS / CARDS                   */
+/* --------------------------------------------- */
+.recursos h2 {
+    color: var(--cor-principal);
+    margin-bottom: var(--espacamento-medio);
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--espacamento-medio);
+}
+
+.card {
+    background: var(--cor-branca);
+    padding: var(--espacamento-medio);
+    border-radius: var(--borda-card);
+    width: 250px;
+    text-align: center;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--cor-branca);
+    background: var(--cor-principal);
+    padding: var(--espacamento-pequeno) 15px;
+    border-radius: var(--borda-arredondada);
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background: var(--cor-principal);
+}
+
+/* --------------------------------------------- */
+/* 🔻 RODAPÉ                                     */
+/* --------------------------------------------- */
+.rodape {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: var(--espacamento-grande);
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.links-rodape {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--espacamento-medio);
+}
+
+.links-rodape a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-rodape a:hover {
+    color: rgb(240, 240, 240);
+}

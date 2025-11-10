@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎄 A Magia da Árvore de Natal</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ======== ESTILO GERAL ======== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: radial-gradient(circle at top, #002b00 0%, #001500 100%);
+  color: #fffaf0;
+  overflow-x: hidden;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: gold;
+  text-shadow: 0 0 15px #fff;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from { text-shadow: 0 0 10px gold; }
+  to { text-shadow: 0 0 25px white; }
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #ffd;
+}
+
+/* ======== CONTEÚDO ======== */
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #ffd700;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ======== ÁRVORE DE NATAL (CSS PURO) ======== */
+.tree {
+  position: relative;
+  margin: 3rem auto;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 120px solid #0a3;
+  filter: drop-shadow(0 0 15px #0f0);
+  animation: brilhar 3s infinite ease-in-out;
+}
+
+.tree::before, .tree::after {
+  content: "";
+  position: absolute;
+  left: -120px;
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+}
+
+.tree::before {
+  top: -90px;
+  border-bottom: 130px solid #0b4;
+}
+
+.tree::after {
+  top: -180px;
+  border-bottom: 140px solid #0c5;
+}
+
+/* Tronco */
+.trunk {
+  position: relative;
+  background: #663300;
+  width: 40px;
+  height: 60px;
+  margin: -5px auto 0;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #000;
+}
+
+/* Estrela no topo */
+.star {
+  position: absolute;
+  top: -210px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid gold;
+  border-left: 15px solid transparent;
+  transform: rotate(35deg);
+  animation: cintilar 2s infinite ease-in-out;
+}
+.star::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid gold;
+  border-left: 15px solid transparent;
+  transform: rotate(-70deg);
+}
+
+/* Bolinhas */
+.ball {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 0 10px red;
+  animation: piscar 2s infinite ease-in-out;
+}
+.ball:nth-child(1) { top: -30px; left: -60px; background: gold; animation-delay: 0.3s; }
+.ball:nth-child(2) { top: -20px; left: 30px; background: red; animation-delay: 0.6s; }
+.ball:nth-child(3) { top: -100px; left: -40px; background: #ff69b4; animation-delay: 1s; }
+.ball:nth-child(4) { top: -110px; left: 50px; background: #00bfff; animation-delay: 1.3s; }
+.ball:nth-child(5) { top: -160px; left: -20px; background: orange; animation-delay: 1.8s; }
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.2); }
+}
+
+@keyframes cintilar {
+  0%, 100% { filter: brightness(1); transform: rotate(35deg) scale(1); }
+  50% { filter: brightness(2); transform: rotate(35deg) scale(1.2); }
+}
+
+@keyframes brilhar {
+  0%, 100% { filter: drop-shadow(0 0 15px #0f0); }
+  50% { filter: drop-shadow(0 0 25px #9f9); }
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.5);
+  color: gold;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+/* ======== NEVE ======== */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1.2rem;
+  animation: cair linear infinite;
+  z-index: 999;
+}
+@keyframes cair {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>🎄 A Magia da Árvore de Natal 🎁</h1>
+  <p>Um símbolo de esperança, luz e união entre todos os corações.</p>
+</header>
+
+<main>
+  <section>
+    <h2>🌟 O Espírito Natalino</h2>
+    <p>
+      A Árvore de Natal representa a vida, a alegria e a renovação.  
+      Suas luzes simbolizam os sonhos e a fé que mantemos acesos dentro de nós.  
+      Cada enfeite é uma lembrança preciosa — de amor, amizade e gratidão.
+    </p>
+  </section>
+
+  <section>
+    <h2>🎄 Nossa Árvore de Natal</h2>
+    <div class="tree">
+      <div class="star"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+    <div class="trunk"></div>
+    <p>Feita com amor, esperança e muita magia natalina! 💫</p>
+  </section>
+
+  <section>
+    <h2>💬 Mensagem Especial</h2>
+    <p>
+      Que a luz da Árvore de Natal ilumine seus dias e aqueça o seu coração.  
+      Que o novo ano traga paz, prosperidade e muitos momentos doces!  
+      <strong>Feliz Natal e um Ano Novo cheio de amor! ❤️</strong>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>Com carinho, do Espírito Natalino ✨ — 2025</p>
+</footer>
+
+<script>
+// === NEVE CAINDO ===
+const snowCount = 30;
+for (let i = 0; i < snowCount; i++) {
+  const snow = document.createElement("div");
+  snow.classList.add("snowflake");
+  snow.textContent = "❄";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  snow.style.fontSize = (Math.random() * 1.5 + 0.8) + "rem";
+  snow.style.opacity = Math.random();
+  document.body.appendChild(snow);
+}
+</script>
+</body>
+</html>

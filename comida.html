@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🍽️ Comidas Típicas de Natal</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ======== ESTILO GERAL ======== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: radial-gradient(circle at top, #006400 0%, #001a00 100%);
+  color: #fffaf0;
+  overflow-x: hidden;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: gold;
+  margin: 0;
+  text-shadow: 0 0 15px #fff;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from { text-shadow: 0 0 15px gold; }
+  to { text-shadow: 0 0 30px #fff; }
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #ffe;
+}
+
+/* ======== SEÇÕES ======== */
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #ffd700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ======== ÍCONES DE COMIDAS (CSS PURO) ======== */
+.foods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.food {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #ff0000;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px #fff5, 0 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.food:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px gold;
+}
+
+/* Detalhes de tipos */
+.food:nth-child(1) { background: radial-gradient(circle at top, #f4a261, #8b4513); }
+.food:nth-child(2) { background: radial-gradient(circle at top, #ff6347, #b22222); }
+.food:nth-child(3) { background: radial-gradient(circle at top, #d4af37, #b8860b); }
+.food:nth-child(4) { background: radial-gradient(circle at top, #deb887, #8b5a2b); }
+.food:nth-child(5) { background: radial-gradient(circle at top, #e9967a, #a0522d); }
+
+/* ======== BOTÃO ======== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, gold, #ff0000);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #fff, gold);
+  color: #b30000;
+  transform: scale(1.1);
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  color: gold;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ======== NEVE ======== */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1.3rem;
+  animation: cair linear infinite;
+  z-index: 999;
+}
+
+@keyframes cair {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>🍽️ Comidas Típicas de Natal 🎄</h1>
+  <p>Sabores que reúnem famílias e aquecem corações!</p>
+</header>
+
+<main>
+  <section>
+    <h2>🎅 Tradição e Sabor</h2>
+    <p>
+      No Natal, a mesa se transforma em um banquete de alegria!  
+      Cada prato é feito com amor, simbolizando união, fartura e gratidão.  
+      Vamos conhecer algumas das delícias mais tradicionais dessa época mágica!
+    </p>
+  </section>
+
+  <section>
+    <h2>🍗 Nossas Comidas Natalinas Favoritas</h2>
+    <div class="foods">
+      <div class="food">Peru</div>
+      <div class="food">Tender</div>
+      <div class="food">Farofa</div>
+      <div class="food">Rabanada</div>
+      <div class="food">Panetone</div>
+    </div>
+    <p style="margin-top:2rem;">
+      Cada prato tem um sabor especial, e juntos formam o verdadeiro espírito da ceia natalina! 🎁  
+    </p>
+  </section>
+
+  <section>
+    <h2>✨ Um Brinde à Alegria</h2>
+    <p>
+      Que nunca falte amor, risadas e boas lembranças à mesa.  
+      Celebre o sabor da vida com quem faz seu coração sorrir.  
+      <strong>Feliz Natal e bom apetite! 🍷</strong>
+    </p>
+    <a href="#" class="btn">Ver Receitas Tradicionais 🍴</a>
+  </section>
+</main>
+
+<footer>
+  <p>Com carinho e sabor — Ceia de Natal © 2025</p>
+</footer>
+
+<script>
+// === NEVE CAINDO ===
+const snowCount = 30;
+for (let i = 0; i < snowCount; i++) {
+  const snow = document.createElement("div");
+  snow.classList.add("snowflake");
+  snow.textContent = "❄";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  snow.style.fontSize = (Math.random() * 1.5 + 0.8) + "rem";
+  snow.style.opacity = Math.random();
+  document.body.appendChild(snow);
+}
+</script>
+</body>
+</html>

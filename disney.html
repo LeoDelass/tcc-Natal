@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="disney.css">
+</head>
+<body>
+    <header>
+        <h1>Disneyland</h1>
+        <p>Saiba mais sobre o Natal na Disney</p>
+    </header>
+    <section>
+        <h2>O que vamos aprender?</h2>
+        <ul>
+            <li>Como é o Natal na Disney.</li>
+            <li>Quais apresentaçoes tem.</li>
+            <li>Como são as fantasia.</li>
+        </ul>
+        <button onclick="mostrarDetalhes()">Ver detalhes</button>
+        <div class="detalhes" id="detalhes">
+            <p>Natal na Disney</p>
+        </div>
+    </section>
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if (detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+                detalhes.style.display = "block";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
+
+
+<section class="recursos">
+    <h2>Recursos Recomendados</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="disney.jpg" alt="Arvore">
+            <h3>Disney</h3>
+            <p>O Natal na Disney é uma época mágica, com os parques transformados por decorações festivas, luzes cintilantes e árvores temáticas. O Magic Kingdom oferece a Mickey's Very Merry Christmas Party (Festa de Natal Muito Feliz do Mickey), um evento especial que inclui desfiles temáticos, um show de fogos, encontros com personagens e doces gratuitos. Outras áreas como o Hollywood Studios e o Epcot também têm programação especial, que inclui comida temática e shows. Além disso, o Disney Springs se torna um paraíso de inverno com a Christmas Tree Stroll, onde você pode encontrar árvores temáticas e o Papai Noel para fotos. </p>
+
+        </div>
+        <div class="card">
+            <img src="disney2.jpg" alt="Noel">
+            <h3>apresentacao</h3>
+            <p>A apresentação do Natal na Disney nos parques de Orlando e em eventos como o "Mickey's Very Merry Christmas Party" (Festa de Natal Muito Feliz do Mickey) oferece decorações festivas, nevascas artificiais, a presença do Papai Noel e personagens, shows de fogos no castelo, desfiles temáticos com personagens e atrações especiais, além da iluminação especial de árvores.Passar o Natal na Disney é uma experiência mágica, com parques decorados, iluminação especial, eventos temáticos como desfiles, shows de fogos e a oportunidade de encontrar personagens em trajes natalinos.  </p>
+
+            </div>
+        <div class="card">
+            <img src="disney3.jpg" alt="disney">
+            <h3>Fantasia</h3>
+            <p>
+                As fantasias de Natal na Disney são trajes especiais que os personagens e artistas usam durante a temporada de festas, além das roupas festivas vendidas nas lojas do parque. Elas incluem variações natalinas dos personagens clássicos, fantasias temáticas para desfiles e trajes de inverno que incorporam elementos festivos.As fantasias precisam ser apropriadas para famílias e não podem ser perturbadoras, ofensivas, polêmicas nem violentas. As fantasias não podem conter adereços ou acessórios que se assemelhem ou possam ser facilmente confundidos com armas reais.</p>
+
+        </div>
+    </div>
+</section>

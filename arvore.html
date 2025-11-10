@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="arvore.css">
+</head>
+<body>
+    <header>
+        <h1>Arvore de Natal</h1>
+        <p>Saiba mais sobre a Arvore de Natal</p>
+    </header>
+    <section>
+        <h2>O que vamos aprender?</h2>
+        <ul>
+            <li>A origem da Arvore de Natal.</li>
+            <li>Porque a Arvore de Natal é um Pinheiro.</li>
+            <li>Historia da Arvore de Natal.</li>
+        </ul>
+        <button onclick="mostrarDetalhes()">Ver detalhes</button>
+        <div class="detalhes" id="detalhes">
+            <p>Noel</p>
+        </div>
+    </section>
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if (detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+                detalhes.style.display = "block";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
+
+
+<section class="recursos">
+    <h2>Recursos Recomendados</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="arvore1.jpg" alt="Arvore">
+            <h3>Origem</h3>
+            <p>A árvore de Natal tem origens em costumes pagãos antigos, como decorações com plantas para o solstício de inverno na Europa. No entanto, a tradição moderna da árvore de Natal nasceu na Alemanha no século XVI, como um símbolo da "árvore do paraíso" para festas religiosas, evoluindo com adornos como frutas e velas. No século XIX, a prática foi popularizada no mundo todo, especialmente após a divulgação da imagem da Rainha Vitória com a família ao lado de uma árvore de Natal.</p>
+
+        </div>
+        <div class="card">
+            <img src="arvore.jpg" alt="Noel">
+            <h3>Pinheiro</h3>
+            <p>O pinheiro tornou-se a árvore de Natal porque, nas tradições pagãs e cristãs, representa a vida e a eternidade por ser uma árvore perene, mantendo o verde mesmo no inverno. A lenda de Martinho Lutero no século XVI, que decorou um pinheiro com velas e estrelas para recriar o brilho de uma floresta nevada, também contribuiu para a sua associação ao Natal, simbolizando a luz de Cristo.Sua origem mistura tradições pagãs de celebração da natureza com a simbologia cristã, representando a promessa da vida eterna em Cristo, a luz que Ele trouxe e a estrela que guiou os Reis Magos.  </p>
+
+            </div>
+        <div class="card">
+            <img src="arvore2.jpg" alt="disney">
+            <h3>Fantasia</h3>
+            <p>A árvore de Natal surgiu na Alemanha no século XVI, inspirada por festivais pagãos de inverno e tradições cristãs, como a "árvore do paraíso", decorada com frutas para celebrar Adão e Eva. Martinho Lutero teria popularizado a tradição ao adicionar velas aos galhos de uma árvore, imitando as estrelas do céu. O costume se expandiu na Europa e popularizou-se mundialmente no século XIX, após a rainha Vitória e o príncipe Albert serem retratados com uma em uma publicação inglesa. </p>
+
+        </div>
+    </div>
+</section>

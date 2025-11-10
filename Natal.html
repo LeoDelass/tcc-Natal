@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎅 Feliz Natal!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Gerais */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom, #ff0000, #008000);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: gold;
+            text-shadow: 2px 2px 8px #000;
+            animation: brilho 2s infinite alternate;
+        }
+
+        @keyframes brilho {
+            from { text-shadow: 2px 2px 8px gold; }
+            to { text-shadow: 2px 2px 20px white; }
+        }
+
+        main {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        h2 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background: gold;
+            color: #b30000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #008000;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0,0,0,0.5);
+            color: gold;
+        }
+
+        /* Flocos de Neve */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: white;
+            font-size: 1.5rem;
+            animation: cair linear infinite;
+        }
+
+        @keyframes cair {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎄 Feliz Natal e Boas Festas! 🎁</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>✨ Que a magia do Natal ilumine seu coração</h2>
+            <p>
+                Nesta época tão especial, desejamos que a alegria, o amor e a esperança estejam presentes em cada momento.  
+                Que você celebre com pessoas queridas, rodeado de risadas, abraços e bons sentimentos.
+            </p>
+            <a href="#" class="btn">Enviar Mensagem de Natal 🎅</a>
+        </section>
+
+        <section>
+            <h2>🎶 Entre no clima!</h2>
+            <audio controls autoplay loop>
+                <source src="https://www.bensound.com/bensound-music/bensound-christmas.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>Com carinho, da equipe <strong>Espírito Natalino ✨</strong> — 2025</p>
+    </footer>
+
+    <!-- Flocos de Neve animados -->
+    <script>
+        const snowContainer = document.body;
+        const snowCount = 25;
+
+        for (let i = 0; i < snowCount; i++) {
+            const snow = document.createElement("div");
+            snow.classList.add("snowflake");
+            snow.textContent = "❄";
+            snow.style.left = Math.random() * 100 + "vw";
+            snow.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            snow.style.fontSize = (Math.random() * 1.5 + 1) + "rem";
+            snow.style.opacity = Math.random();
+            snowContainer.appendChild(snow);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* --- Estilos Gerais e Fundo --- */
+body {
+    font-family: 'Mountains of Christmas', cursive; /* Fonte festiva */
+    background-color: #004d40; /* Verde escuro */
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Efeito de Neve (Animação pura CSS) */
+.neve {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white"/></svg>') repeat;
+    background-size: 50px 50px;
+    opacity: 0.8;
+    z-index: -1; /* Fica atrás do conteúdo */
+    animation: cairNeve 10s linear infinite;
+}
+
+.neve2 {
+    background-size: 80px 80px;
+    animation-duration: 15s;
+    animation-delay: -5s;
+    opacity: 0.6;
+}
+
+.neve3 {
+    background-size: 30px 30px;
+    animation-duration: 20s;
+    animation-delay: -10s;
+    opacity: 0.4;
+}
+
+@keyframes cairNeve {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* --- Cabeçalho e Contador --- */
+.cabecalho-natal {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #ffd700; /* Dourado */
+    text-shadow: 2px 2px 4px #d80032; /* Sombra vermelha */
+}
+
+.contador {
+    margin-top: 15px;
+}
+
+#dias {
+    font-size: 2em;
+    font-weight: bold;
+    color: #d80032; /* Vermelho */
+}
+
+/* --- Conteúdo Principal --- */
+.conteudo-principal {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #17a200; /* Verde */
+    margin-top: 40px;
+    text-shadow: 1px 1px 2px #333;
+}
+
+/* --- Seção Presentes --- */
+.galeria-presentes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.presente {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.presente:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos de cor para os presentes */
+.presente-vermelho {
+    background-color: #d80032; /* Vermelho forte */
+}
+.presente-vermelho::before { /* Fita Dourada */
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #ffd700;
+}
+.presente-vermelho::after { /* Fita Dourada Horizontal */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #ffd700;
+}
+
+.presente-verde {
+    background-color: #17a200; /* Verde forte */
+}
+.presente-verde::before { /* Fita Vermelha */
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #d80032;
+}
+.presente-verde::after { /* Fita Vermelha Horizontal */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #d80032;
+}
+
+.presente-dourado {
+    background-color: #ffd700; /* Dourado */
+    color: #333;
+}
+.presente-dourado::before { /* Fita Verde */
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #17a200;
+}
+.presente-dourado::after { /* Fita Verde Horizontal */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #17a200;
+}
+
+/* Botão Festivo */
+.botao-festivo {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #d80032;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid #ffd700;
+}
+
+.botao-festivo:hover {
+    background-color: #ff004c;
+    transform: translateY(-3px);
+}
+
+/* --- Seção Festas --- */
+.secao-festas {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.texto-festa {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* --- Rodapé --- */
+.rodape-natal {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #00332a;
+    font-size: 0.9em;
+}

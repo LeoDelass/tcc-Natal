@@ -1,0 +1,57 @@
+/* Estilos básicos para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; /* Fundo claro */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo para o cartão */
+.cartao-natal {
+    background-color: white;
+    border: 10px solid #D80032; /* Borda vermelha natalina */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Estilo para o título (tema doce) */
+.titulo-doce {
+    color: #17A200; /* Verde de Natal */
+    font-family: 'Georgia', serif; /* Fonte mais festiva */
+    font-size: 2.5em;
+    text-shadow: 3px 3px 0 #D80032, /* Sombra vermelha para efeito "listrado" */
+                 -3px -3px 0 #D80032;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a mensagem */
+.mensagem {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Estilo para a decoração de doces (emojis) */
+.decoracao-doce {
+    font-size: 2em;
+    /* Animação simples para dar um toque mágico (opcional) */
+    animation: pulsar 1.5s infinite alternate;
+}
+
+/* Definição da animação 'pulsar' */
+@keyframes pulsar {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}

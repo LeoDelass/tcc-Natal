@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Celebre o Natal com informações, curiosidades e símbolos natalinos como o Papai Noel, a árvore de Natal e muito mais!">
+<meta name="author" content="Seu Nome">
+<title>Especial de Natal - Natal Encantado</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+integrity="sha512-9G3xHkVZ4b+8Wb1xU/5Pz8pUPgZdxT4QqQ0QfWZKX4Aq8pW0cEvG2e1cDq9Zb9p8WozzBHE+KljKzUV6+i6zvw=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="icon" href="gorro.png" type="image/png">
+
+<style>
+/* ===== Estilo Global ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: linear-gradient(#ffe6e6, #fff9f0); color: #333; line-height:1.6; overflow-x:hidden; position:relative; }
+a { text-decoration:none; color: inherit; transition: 0.3s; }
+h1,h2,h3 { font-family: 'Cursive', sans-serif; color: #b20000; }
+h1 { font-size: 2.5rem; margin-bottom: 10px; text-align:center; }
+h2 { font-size: 2rem; margin:20px 0 10px; text-align:center; }
+h3 { font-size: 1.5rem; margin: 10px 0; text-align:center; }
+
+/* ===== Cabeçalho com Pisca-Pisca ===== */
+.cabecalho { display:flex; justify-content:space-between; align-items:center; padding:20px 10%; background: #b20000; color:#fff; position: sticky; top:0; z-index:1000; }
+.cabecalho::before {
+    content:"";
+    position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;
+    background: repeating-linear-gradient(45deg, #ff0, #ff0 2px, transparent 2px, transparent 4px);
+    animation: pisca 1s linear infinite;
+    opacity:0.3;
+}
+@keyframes pisca { 0%,50%,100% {opacity:0.3} 25%,75% {opacity:0.7} }
+
+.logo { width:50px; }
+.lista-menu { list-style:none; display:flex; gap:20px; }
+.lista-menu li { position: relative; }
+.lista-menu > li > a { color:#fff; padding:8px 12px; border-radius:6px; display:flex; align-items:center; gap:5px; }
+.lista-menu > li > a:hover { background: #ff4d4d; }
+.submenu { display:none; position:absolute; top:40px; left:0; background:#fff; color:#333; border-radius:6px; box-shadow:0 4px 8px rgba(0,0,0,0.2); min-width:150px; }
+.submenu li { padding:10px; }
+.submenu li a { color:#333; }
+.submenu li a:hover { background:#ffe6e6; color:#b20000; }
+.lista-menu li:hover .submenu { display:block; }
+
+/* ===== Atalhos Header ===== */
+.container-direita a { margin-left:15px; font-size:1.2rem; }
+.container-direita a:hover { color:#ffcc00; }
+
+/* ===== Seções ===== */
+.conteudo { padding:40px 10%; position:relative; z-index:1; }
+.introducao figure { margin-top:20px; text-align:center; }
+.introducao img { width:100%; max-width:600px; border-radius:12px; box-shadow:0 8px 15px rgba(0,0,0,0.2); transition: transform 0.3s; }
+.introducao img:hover { transform: scale(1.05); }
+
+/* ===== Características ===== */
+.beneficios ul { list-style:none; display:flex; flex-direction: column; gap:15px; margin-top:20px; }
+.beneficios i { color: #b20000; margin-right:8px; }
+
+/* ===== Cards ===== */
+.cards { display:flex; flex-wrap:wrap; gap:20px; margin-top:20px; justify-content: space-between; }
+.card { background:#fff5f5; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2); flex:1 1 calc(33% - 20px); min-width:250px; overflow:hidden; transition: transform 0.3s; display:flex; flex-direction:column; }
+.card img { width:100%; height:200px; object-fit:cover; transition: transform 0.3s; }
+.card:hover img { transform: scale(1.05); }
+.card h3 { padding:10px 15px; }
+.card p { flex:1; padding:0 15px 10px; color:#555; }
+.card .botao { display:block; text-align:center; margin:10px 15px; padding:8px 0; background:#b20000; color:#fff; border-radius:6px; font-weight:bold; transition:0.3s; }
+.card .botao:hover { background:#ff4d4d; }
+
+/* ===== Footer ===== */
+.rodape { background:#b20000; color:#fff; padding:20px 10%; margin-top:40px; text-align:center; }
+.rodape .links-rodape { list-style:none; display:flex; justify-content:center; gap:15px; margin-top:10px; }
+.rodape .links-rodape a { color:#fff; }
+.rodape .links-rodape a:hover { color:#ffcc00; }
+
+/* ===== Neve Caindo ===== */
+.neve { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1000; }
+.floco { position:absolute; top:-10px; background:white; border-radius:50%; opacity:0.8; width:8px; height:8px; animation: cair linear infinite; }
+@keyframes cair {
+    0% {transform: translateY(0) rotate(0deg);}
+    100% {transform: translateY(100vh) rotate(360deg);}
+}
+
+/* ===== Bolas Decorativas ===== */
+.bola { position:absolute; border-radius:50%; width:15px; height:15px; background: red; animation: flutuar 5s ease-in-out infinite; opacity:0.8; }
+@keyframes flutuar {
+    0%,100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+}
+
+/* ===== Responsividade ===== */
+@media(max-width:900px){ .cards { flex-direction:column; } .cabecalho { flex-direction:column; align-items:flex-start; gap:10px; } }
+</style>
+
+</head>
+<body>
+
+<header class="cabecalho" role="banner">
+    <div class="container-esquerda">
+        <a href="index.html" class="logo-link" aria-label="Página inicial">
+            <img src="gorro.png" alt="Logo do site" class="logo">
+        </a>
+        <nav aria-label="Menu principal">
+            <ul class="lista-menu">
+                <li>
+                    <a href="#"><i class="fa-solid fa-gift"></i> Presente</a>
+                    <ul class="submenu">
+                        <li><a href="treno.html"><i class="fa-solid fa-sleigh"></i> Trenó</a></li>
+                        <li><a href="candy.html"><i class="fa-solid fa-candy-cane"></i> Candy</a></li>
+                        <li><a href="holly.html"><i class="fa-solid fa-holly-berry"></i> Holly-berry</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-gifts"></i> Presentes</a>
+                    <ul class="submenu">
+                        <li><a href="Natal.html"><i class="fab fa-html5"></i> Natal</a></li>
+                        <li><a href="doce.html"><i class="fab fa-css3-alt"></i> Doce</a></li>
+                        <li><a href="pinheiro.html"><i class="fab fa-react"></i> Pinheiro</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-cloud-moon"></i> Papai Noel</a>
+                    <ul class="submenu">
+                        <li><a href="papai.html"><i class="fas fa-network-wired"></i> Noel</a></li>
+                        <li><a href="comida.html"><i class="fas fa-cloud"></i> Comida</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-direita" aria-label="Atalhos de navegação">
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+    </div>
+</header>
+
+<main class="conteudo" role="main">
+    <section class="introducao">
+        <h1>🎅 HOU HOU HOU</h1>
+        <p>O Natal é uma celebração cristã que comemora o nascimento de Jesus Cristo,
+        ocorrido em Belém, na Palestina, e celebrado em 25 de dezembro. 
+        A palavra <strong>“Natal”</strong> vem do latim <em>nātālis</em>, 
+        que significa “referente ao nascimento”.</p>
+        <figure>
+            <img src="natal.jpg" alt="Cena de Natal com árvore decorada e presentes" loading="lazy">
+            <figcaption>Imagem ilustrativa do espírito natalino.</figcaption>
+        </figure>
+    </section>
+
+    <section class="beneficios">
+        <h2>✨ Características do Natal</h2>
+        <ul>
+            <li><i class="fa-solid fa-check"></i> <strong>Nascimento de Jesus Cristo:</strong> celebrado em 25 de dezembro.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Data simbólica:</strong> 25 de dezembro.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Árvore de Natal:</strong> símbolo da vida e esperança.</li>
+        </ul>
+    </section>
+
+    <section class="recursos">
+        <h2>🎄 Recursos Recomendados</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="arvore.jpg" alt="Árvore de Natal decorada" loading="lazy">
+                <h3>Árvore de Natal</h3>
+                <p>A árvore de Natal representa vida, renovação e esperança, sendo um dos principais símbolos natalinos.</p>
+                <a href="arvore.html" class="botao">Saiba mais</a>
+            </article>
+
+            <article class="card">
+                <img src="noel.jpg" alt="Fantasia de Papai Noel vermelha e branca" loading="lazy">
+                <h3>Fantasias</h3>
+                <p>Vista-se como Papai Noel, Mamãe Noel ou elfos e entre no clima natalino com estilo!</p>
+                <a href="noel.html" class="botao">Saiba mais</a>
+            </article>
+
+            <article class="card">
+                <img src="disney.jpg" alt="Decoração natalina na Disney" loading="lazy">
+                <h3>Natal na Disney</h3>
+                <p>Descubra as celebrações mágicas do Natal nos parques da Disney, com desfiles e decorações encantadoras.</p>
+                <a href="disney.html" class="botao">Saiba mais</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="rodape">
+    <p>&copy; <time datetime="2025">2025</time> - Todos os direitos reservados.</p>
+    <ul class="links-rodape">
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</footer>
+
+<!-- ===== Neve e Bolas Decorativas ===== -->
+<div class="neve"></div>
+<script>
+// Criar flocos de neve
+const neve = document.querySelector('.neve');
+for(let i=0;i<50;i++){
+    const floco = document.createElement('div');
+    floco.className = 'floco';
+    floco.style.left = Math.random()*100 + 'vw';
+    floco.style.animationDuration = (3+Math.random()*5) + 's';
+    floco.style.width = floco.style.height = (5+Math.random()*8) + 'px';
+    neve.appendChild(floco);
+}
+
+// Criar bolas decorativas
+for(let i=0;i<10;i++){
+    const bola = document.createElement('div');
+    bola.className = 'bola';
+    bola.style.background = ['red','green','gold','blue','pink'][Math.floor(Math.random()*5)];
+    bola.style.left = Math.random()*100 + 'vw';
+    bola.style.top = Math.random()*50 + 'vh';
+    bola.style.animationDuration = (2+Math.random()*3) + 's';
+    document.body.appendChild(bola);
+}
+</script>
+</body>
+</html>

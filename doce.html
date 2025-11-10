@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🍪 Doces de Natal 🎄</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ======== ESTILO GERAL ======== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom right, #b30000, #006400);
+  color: #fffaf0;
+  overflow-x: hidden;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: gold;
+  margin: 0;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from { text-shadow: 2px 2px 8px gold; }
+  to { text-shadow: 0 0 25px #fff; }
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+/* ======== SEÇÕES ======== */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+section {
+  background: rgba(255,255,255,0.1);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ======== BOTÃO ======== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, gold, #ff0000);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #fff, gold);
+  color: #b30000;
+  transform: scale(1.1);
+}
+
+/* ======== DOCES (DESENHOS COM CSS) ======== */
+.doces-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.doce {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #ff4d4d, #b30000);
+  box-shadow: inset 0 0 10px #fff5, 0 0 15px rgba(0,0,0,0.3);
+  animation: pulsar 2s infinite ease-in-out;
+}
+
+.doce::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  background: repeating-linear-gradient(45deg, white, white 10px, #ff0000 10px, #ff0000 20px);
+  border-radius: 5px;
+  top: 20%;
+  left: 20%;
+  transform: rotate(-45deg);
+}
+
+.doce::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.4);
+}
+
+@keyframes pulsar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.5);
+  color: gold;
+  font-size: 1rem;
+}
+
+/* ======== FLOCOS DE NEVE ======== */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1.3rem;
+  animation: cair linear infinite;
+  z-index: 999;
+}
+
+@keyframes cair {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>🎄 Doces de Natal 🍬</h1>
+  <p>Sabores que aquecem o coração e trazem a doçura do Natal ✨</p>
+</header>
+
+<main>
+  <section>
+    <h2>Bem-vindo ao Reino dos Doces Natalinos</h2>
+    <p>Entre no clima natalino com delícias feitas de carinho, açúcar e um toque de magia!  
+       Cada doce é um pedacinho do Natal — perfeito para compartilhar com quem você ama.</p>
+    <a href="#" class="btn">Ver Receitas 🎅</a>
+  </section>
+
+  <section>
+    <h2>Alguns dos nossos doces mais amados 🍪</h2>
+    <div class="doces-container">
+      <div class="doce" title="Biscoito de Gengibre"></div>
+      <div class="doce" title="Trufa de Chocolate"></div>
+      <div class="doce" title="Bala de Canela"></div>
+      <div class="doce" title="Doce de Natal Dourado"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mensagem de Natal 🎁</h2>
+    <p>
+      Que o perfume dos doces e o brilho das luzes inspirem alegria, união e esperança.  
+      Que nunca faltem sorrisos à mesa e doçura na vida.  
+      <strong>Feliz Natal e um Ano Novo cheio de sabor!</strong>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>Com amor e açúcar — Doces de Natal © 2025</p>
+</footer>
+
+<script>
+// === NEVE CAINDO ===
+const snowCount = 25;
+for (let i = 0; i < snowCount; i++) {
+  const snow = document.createElement("div");
+  snow.classList.add("snowflake");
+  snow.textContent = "❄";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  snow.style.fontSize = (Math.random() * 1.5 + 0.8) + "rem";
+  snow.style.opacity = Math.random();
+  document.body.appendChild(snow);
+}
+</script>
+</body>
+</html>

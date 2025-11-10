@@ -1,0 +1,90 @@
+/* ======== RESET BÁSICO ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ======== ESTILOS GERAIS ======== */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: aliceblue;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ======== CABEÇALHO ======== */
+  header {
+    background-color: rgb(129, 4, 4);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* ======== NAVEGAÇÃO ======== */
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover { /* corrigido o erro :houver */
+    text-decoration: underline;
+    color: #ffcccc;
+  }
+  
+  /* ======== SEÇÕES ======== */
+  section {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    color: #000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(129, 4, 4);
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* ======== RODAPÉ ======== */
+  footer {
+    background: #333;
+    color: #fff; /* Corrigido: antes o texto era preto e quase invisível */
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* ======== RESPONSIVIDADE ======== */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    section {
+      padding: 20px;
+    }
+  }
+  

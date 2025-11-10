@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="noel.css">
+</head>
+<body>
+    <header>
+        <h1>Papai Noel</h1>
+        <p>Saiba mais sobre o Noel</p>
+    </header>
+    <section>
+        <h2>O que vamos aprender?</h2>
+        <ul>
+            <li>A origem do Papai Noel vem da figura histórica do bispo São Nicolau, conhecido pela sua generosidade e por distribuir presentes no século IV.</li>
+            <li>
+                A história das fantasias de Natal está profundamente ligada à evolução de personagens e tradições.</li>
+            <li>A história da cultura do Natal é marcada pela fusão de tradições cristãs e pagãs, celebrando o nascimento de Jesus Cristo em 25 de dezembro.</li>
+        </ul>
+        <button onclick="mostrarDetalhes()">Ver detalhes</button>
+        <div class="detalhes" id="detalhes">
+            <p>Noel</p>
+        </div>
+    </section>
+    <script>
+        function mostrarDetalhes() {
+            const detalhes = document.getElementById("detalhes");
+            if (detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+                detalhes.style.display = "block";
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
+
+
+<section class="recursos">
+    <h2>Recursos Recomendados</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="papai-noel2.jpg" alt="Arvore">
+            <h3>origem</h3>
+            <p>A origem do Papai Noel combina figuras históricas, como o bispo São Nicolau de Mira, e tradições pagãs germânicas, como a figura de Odin e as festas de inverno, resultando na lenda que chegou à América com imigrantes holandeses. A figura moderna foi consolidada em campanhas publicitárias da Coca-Cola nos anos 1930, que popularizaram a imagem do velhinho barbudo e de vermelho.</p>
+            <a href="https://brasilescola.uol.com.br/natal/historia-papai-noel.htm">Saiba Mais</a>
+        </div>
+        <div class="card">
+            <img src="noel.jpg" alt="Noel">
+            <h3>Fantasias</h3>
+            <p>Fantasia de Natal é um disfarce para uma festa temática natalina, que pode incluir personagens como Papai Noel, Mamãe Noel, anjos, elfo e até personagens de contos de fadas natalinos como o Quebra-Nozes.
+                A história da fantasia do Papai Noel é uma evolução que combina elementos religiosos, lendas europeias e a publicidade moderna para criar a imagem icônica que conhecemos hoje. </p>
+            <a href="https://aventurasnahistoria.com.br/noticias/almanaque/o-papai-noel-sempre-usou-vermelho-historia-da-vestimenta-do-bom-velhinho.phtml">Saiba Mais</a>
+        </div>
+        <div class="card">
+            <img src="Papai-Noel3.jpg" alt="disney">
+            <h3>cultura</h3>
+            <p>A cultura do Papai Noel é a tradição que envolve a figura de um velhinho barbudo e alegre que entrega presentes às crianças no Natal, simbolizando bondade, caridade e o espírito festivo. Sua origem remonta a São Nicolau, um bispo do século IV, e evoluiu através de mitologias pagãs, tradições europeias e influências publicitárias, como a icónica campanha da Coca-Cola que consolidou a sua imagem moderna.</p>
+            <a href="https://www.todamateria.com.br/papai-noel/">Saiba Mais</a>
+        </div>
+    </div>
+</section>
